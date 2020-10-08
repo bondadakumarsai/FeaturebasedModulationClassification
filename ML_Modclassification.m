@@ -17,7 +17,7 @@ X_phase = abs(angle(Input));
 
 %% =========== Part 2: Mapping Data onto Polynoimal Features =============
 % Map X onto Polynomial Features
-X_poly = [X X_phase X.^2 X_phase.^2 X.^4 X_phase.^4 X.^6 X_phase.^6 X.^8 Cumulant];
+X_poly = [X X_phase X.^2 X_phase.^2 X.^4 X_phase.^4 X.^6 X_phase.^6 X.^8 X_phase.^8 Cumulant];
 m = size(X, 1);
 % X_poly=[];
 % for i = 1:100
@@ -70,7 +70,7 @@ m_test = size(X_test, 1);
 %     X_poly_test = [X_poly_test X_map];
 % end
 
-X_poly_test = [X_test X_test_phase X_test.^2 X_test_phase.^2 X_test.^4 X_test_phase.^4 X_test.^6 X_test_phase.^6 X_test.^8 Cumulant];
+X_poly_test = [X_test X_test_phase X_test.^2 X_test_phase.^2 X_test.^4 X_test_phase.^4 X_test.^6 X_test_phase.^6 X_test.^8 X_test_phase.^8 Cumulant];
 [X_poly_test, mu, sigma] = featureNormalize(X_poly_test);  % Normalize
 X_poly_test = [ones(m_test, 1), X_poly_test];
 
@@ -79,3 +79,4 @@ id = 1:1:10000;
 pred_test = [id' pred_test];
 
 %fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
+
