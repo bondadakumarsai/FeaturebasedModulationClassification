@@ -43,7 +43,7 @@ for c = 1:num_labels
     initial_theta = randn(n + 1, 1)*0.01;
 %     
 %     % Set options for fminunc
-    options = optimset('GradObj', 'on', 'MaxIter', 50);
+    options = optimset('GradObj', 'on', 'MaxIter', 100);
 % 
 %     % Run fmincg to obtain the optimal theta
 %     % This function will return theta and the cost 
