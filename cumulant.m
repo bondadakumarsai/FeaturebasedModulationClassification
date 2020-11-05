@@ -44,7 +44,7 @@ for i = 1:len
 
     ratio = abs(c63)^2/abs(c42)^3;
    
-    cum(i,:) = [ratio abs(c60) abs(c61) abs(c62)];
+    cum(i,:) = [ratio abs(c60) abs(c61) abs(c62) abs(c63) abs(m60) abs(m61) abs(m62) abs(m63)];
 
 end
 
